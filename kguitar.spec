@@ -10,7 +10,10 @@ Source0:	http://dl.sourceforge.net/kguitar/%{name}-%{version}.tar.bz2
 Patch0:		%{name}-DESTDIR.patch
 Patch1:		%{name}-doc.patch
 URL:		http://kguitar.sourceforge.net/
+BuildRequires:	autoconf >= 2.52
+BuildRequires:	automake >= 1.6
 BuildRequires:	kdelibs-devel >= 3.0
+BuildRequires:	libtool
 BuildRequires:	tse3-devel >= 0.2.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
