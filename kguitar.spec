@@ -16,6 +16,7 @@ BuildRequires:	fam-devel
 BuildRequires:	kdelibs-devel >= 3.0
 BuildRequires:	libart_lgpl-devel
 BuildRequires:	libtool
+BuildRequires:	rpmbuild(macros) >= 1.129
 BuildRequires:	tse3-devel >= 0.2.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
