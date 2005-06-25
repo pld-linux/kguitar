@@ -1,14 +1,16 @@
+# TODO:
+# - add categories to .desktop file
+
 Summary:	KGuitar - a KDE tabulature editor
 Summary(pl):	KGuitar - edytor tabulatur dla KDE
 Name:		kguitar
-Version:	0.4.9
-Release:	1
+Version:	0.5
+Release:	0.99
 License:	GPL
 Group:		X11/Applications/Sound
 Source0:	http://dl.sourceforge.net/kguitar/%{name}-%{version}.tar.bz2
-# Source0-md5:	a2630735bad73322c441ee7aef95afa1
-Patch0:		%{name}-DESTDIR.patch
-Patch1:		%{name}-doc.patch
+# Source0-md5:	4b259961a8a9aef9e56826f4725fb33d
+Patch0:		%{name}-doc.patch
 URL:		http://kguitar.sourceforge.net/
 BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake >= 1.6
@@ -54,7 +56,6 @@ KDE. Jednak jest to nieco wiêcej ni¿ edytor tabulatur. Jego cechy to:
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
 
 %build
 %{__libtoolize}
@@ -73,7 +74,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	TEXMF=/usr/share/texmf \
-	kde_appsdir=%{_applnkdir} \
+	kde_appsdir=%{_desktopdir} \
 	kde_htmldir=%{_kdedocdir}
 
 # en/kguitar but kguitar-%{version}.mo
@@ -89,12 +90,10 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/*
-%attr(755,root,root) %{_libdir}/lib*.so.*.*.*
 # "KDE library"
-%{_libdir}/lib*.la
+%{_libdir}/
 %{_datadir}/apps/kguitar
-/usr/share/texmf/tex/generic/kgtabs
 %{_datadir}/mimelnk/*/*.desktop
 %{_datadir}/services/*.desktop
 %{_iconsdir}/*/*/*/*.png
-%{_applnkdir}/Multimedia/kguitar.desktop
+%{_desktopdir}
