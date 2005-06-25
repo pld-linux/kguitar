@@ -1,11 +1,8 @@
-# TODO:
-# - add categories to .desktop file
-
 Summary:	KGuitar - a KDE tabulature editor
 Summary(pl):	KGuitar - edytor tabulatur dla KDE
 Name:		kguitar
 Version:	0.5
-Release:	0.99
+Release:	1
 License:	GPL
 Group:		X11/Applications/Sound
 Source0:	http://dl.sourceforge.net/kguitar/%{name}-%{version}.tar.bz2
@@ -52,7 +49,7 @@ KDE. Jednak jest to nieco wiêcej ni¿ edytor tabulatur. Jego cechy to:
 - wysoka konfigurowalno¶æ, aby pasowaæ do wielu instrumentów (nie
   tylko 6-strunowych gitar, a nawet nie tylko gitar), w³±czaj±c
   ¶cie¿ki bêbnów, teksty i inne zdarzenia MIDI.
-
+7
 %prep
 %setup -q
 %patch0 -p1
@@ -76,7 +73,11 @@ rm -rf $RPM_BUILD_ROOT
 	TEXMF=/usr/share/texmf \
 	kde_appsdir=%{_desktopdir} \
 	kde_htmldir=%{_kdedocdir}
-
+#_desktopdir
+mv $RPM_BUILD_ROOT%{_desktopdir}/Multimedia/kguitar.desktop \
+	$RPM_BUILD_ROOT%{_desktopdir}/kguitar.desktop
+echo "Categories=Qt;KDE;Audio;Sequencer;" >>$RPM_BUILD_ROOT%{_desktopdir}/kguitar.desktop 
+rm -rd $RPM_BUILD_ROOT%{_desktopdir}/Multimedia
 # en/kguitar but kguitar-%{version}.mo
 %find_lang %{name} --with-kde --all-name
 
@@ -91,9 +92,9 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/*
 # "KDE library"
-%{_libdir}/
+%{_libdir}/kde3/
 %{_datadir}/apps/kguitar
 %{_datadir}/mimelnk/*/*.desktop
 %{_datadir}/services/*.desktop
 %{_iconsdir}/*/*/*/*.png
-%{_desktopdir}
+%{_desktopdir}/kguitar.desktrop
