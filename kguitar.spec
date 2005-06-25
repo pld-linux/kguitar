@@ -55,7 +55,6 @@ KDE. Jednak jest to nieco wiêcej ni¿ edytor tabulatur. Jego cechy to:
 %patch0 -p1
 
 %build
-%{__libtoolize}
 %{__aclocal}
 %{__autoconf}
 %{__autoheader}
@@ -91,10 +90,11 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/*
-# "KDE library"
-%{_libdir}/kde3/
+%attr(755,root,root) %{_libdir}/kde3/libkguitarpart.so
+%{_libdir}/kde3/libkguitarpart.so
+%{_libdir}/kde3/libkguitarpart.la
 %{_datadir}/apps/kguitar
 %{_datadir}/mimelnk/*/*.desktop
 %{_datadir}/services/*.desktop
-%{_iconsdir}/*/*/*/*.png
-%{_desktopdir}/kguitar.desktrop
+%{_iconsdir}/hicolor/*/*/*.png
+%{_desktopdir}/kguitar.desktop
