@@ -49,7 +49,7 @@ KDE. Jednak jest to nieco wiêcej ni¿ edytor tabulatur. Jego cechy to:
 - wysoka konfigurowalno¶æ, aby pasowaæ do wielu instrumentów (nie
   tylko 6-strunowych gitar, a nawet nie tylko gitar), w³±czaj±c
   ¶cie¿ki bêbnów, teksty i inne zdarzenia MIDI.
-7
+
 %prep
 %setup -q
 %patch0 -p1
@@ -91,7 +91,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_libdir}/kde3/libkguitarpart.so
-%{_libdir}/kde3/libkguitarpart.so
 %{_libdir}/kde3/libkguitarpart.la
 %{_datadir}/apps/kguitar
 %{_datadir}/mimelnk/*/*.desktop
