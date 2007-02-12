@@ -1,5 +1,5 @@
 Summary:	KGuitar - a KDE tabulature editor
-Summary(pl):	KGuitar - edytor tabulatur dla KDE
+Summary(pl.UTF-8):   KGuitar - edytor tabulatur dla KDE
 Name:		kguitar
 Version:	0.5
 Release:	1
@@ -34,21 +34,21 @@ Environment. It's much more than just a tab editor. Its features are:
   6-stringed guitars, and even not only guitars), including drum
   tracks, lyrics and other MIDI events.
 
-%description -l pl
-KGuitar to w uproszczeniu edytor tabulatur gitarowych dla ¶rodowiska
-KDE. Jednak jest to nieco wiêcej ni¿ edytor tabulatur. Jego cechy to:
-- wolnodostêpno¶æ na zasadach GPL
+%description -l pl.UTF-8
+KGuitar to w uproszczeniu edytor tabulatur gitarowych dla Å›rodowiska
+KDE. Jednak jest to nieco wiÄ™cej niÅ¼ edytor tabulatur. Jego cechy to:
+- wolnodostÄ™pnoÅ›Ä‡ na zasadach GPL
 - graficzny interfejs KDE
-- potê¿na i wygodna edycja tabulatur, wraz z wieloma efektami i
-  klasycznym zapisem warto¶ci nut
-- pe³ny i wysoce konfigurowalny import i eksport tabulatur do/z MIDI
-- obs³uga dodatkowych formatów danych, takich jak tabulatury ASCII czy
-  formaty popularnych programów, takich jak Guitar Pro czy TablEdit
-- narzêdzia do tworzenia uk³adów palców dla akordów (chord finder i
+- potÄ™Å¼na i wygodna edycja tabulatur, wraz z wieloma efektami i
+  klasycznym zapisem wartoÅ›ci nut
+- peÅ‚ny i wysoce konfigurowalny import i eksport tabulatur do/z MIDI
+- obsÅ‚uga dodatkowych formatÃ³w danych, takich jak tabulatury ASCII czy
+  formaty popularnych programÃ³w, takich jak Guitar Pro czy TablEdit
+- narzÄ™dzia do tworzenia ukÅ‚adÃ³w palcÃ³w dla akordÃ³w (chord finder i
   chord analyzer)
-- wysoka konfigurowalno¶æ, aby pasowaæ do wielu instrumentów (nie
-  tylko 6-strunowych gitar, a nawet nie tylko gitar), w³±czaj±c
-  ¶cie¿ki bêbnów, teksty i inne zdarzenia MIDI.
+- wysoka konfigurowalnoÅ›Ä‡, aby pasowaÄ‡ do wielu instrumentÃ³w (nie
+  tylko 6-strunowych gitar, a nawet nie tylko gitar), wÅ‚Ä…czajÄ…c
+  Å›cieÅ¼ki bÄ™bnÃ³w, teksty i inne zdarzenia MIDI.
 
 %prep
 %setup -q
