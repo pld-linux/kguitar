@@ -1,5 +1,5 @@
 Summary:	KGuitar - a KDE tabulature editor
-Summary(pl.UTF-8):   KGuitar - edytor tabulatur dla KDE
+Summary(pl.UTF-8):	KGuitar - edytor tabulatur dla KDE
 Name:		kguitar
 Version:	0.5
 Release:	1
