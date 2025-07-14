@@ -52,7 +52,7 @@ KDE. Jednak jest to nieco więcej niż edytor tabulatur. Jego cechy to:
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %{__aclocal}
